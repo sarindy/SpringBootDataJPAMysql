@@ -4,18 +4,24 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="cust_info")
 public class Cust_info {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	private long id;
-	private String firstName;
-	private String lastName;
-	private Date dateOfBirth;
+	@GeneratedValue
+	private long recid;
+	
+	private String firstname;
+	private String lastname;
+	
+	
+	private Date dateofbirth;
+	
+
 	private String nationality;
 	private int sector;
 	private String contact;
@@ -24,13 +30,13 @@ public class Cust_info {
 	
 	public Cust_info(){}
 
-	public Cust_info(long id, String firstName, String lastName, Date dateOfBirth, String nationality, int sector,
+	public Cust_info(long id, String firstname, String lastname, Date dateofbirth, String nationality, int sector,
 			String contact, String email, String address) {
 		
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.dateOfBirth = dateOfBirth;
+		this.recid = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.dateofbirth = dateofbirth;
 		this.nationality = nationality;
 		this.sector = sector;
 		this.contact = contact;
@@ -38,36 +44,36 @@ public class Cust_info {
 		this.address = address;
 	}
 
-	public long getId() {
-		return id;
+	public long getRecid() {
+		return recid;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setRecid(long recid) {
+		this.recid = recid;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getfirstname() {
+		return firstname;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setfirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getlastname() {
+		return lastname;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setlastname(String lastname) {
+		this.lastname = lastname;
 	}
 
-	public Date getDateOfBirth() {
-		return dateOfBirth;
+	public Date getdateofbirth() {
+		return dateofbirth;
 	}
 
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
+	public void setdateofbirth(Date dateofbirth) {
+		this.dateofbirth = dateofbirth;
 	}
 
 	public String getNationality() {
@@ -109,7 +115,7 @@ public class Cust_info {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
+
 	
 	
 	

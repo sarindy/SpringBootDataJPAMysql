@@ -1,4 +1,5 @@
 SET foreign_key_checks = 0;
+
 DROP TABLE IF EXISTS Greeting;
 
 CREATE TABLE Greeting (
@@ -10,9 +11,9 @@ CREATE TABLE Greeting (
   
  CREATE TABLE cust_info (
   recid BIGINT(20) NOT NULL AUTO_INCREMENT,
-  firstName VARCHAR(45) NOT NULL,
-  lastName VARCHAR(45) NOT NULL,
-  dateOfBirth date NOT NULL,
+  firstname VARCHAR(45) NOT NULL,
+  lastname VARCHAR(45) NOT NULL,
+  dateofbirth DATE NOT NULL,
   nationality VARCHAR(45) NOT NULL,
   sector int NOT NULL,
   contact VARCHAR(45) NOT NULL,
